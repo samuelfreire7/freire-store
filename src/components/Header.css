@@ -36,7 +36,7 @@ header nav ul li::after {
     width: 0;
     height: 2px;
     background-color: #00f7ff;
-    transition: width 0.5 ease;
+    transition: width 0.3s ease;
 }
 
 header nav ul li:hover::after {

@@ -10,13 +10,3 @@ const total = items.length;
 let timer;
 
 
-window.addEventListener('DOMContentLoaded', () => {
-  
-  prevButton.addEventListener('click', function() {
-      alert("prev");
-    })
-    
-    nextButtonButton.addEventListener('click', function() {
-        alert("next");
-    })
-});

@@ -4,11 +4,52 @@ import AirPods from '../assets/images/air-pods.png';
 import VisionPro from '../assets/images/vision-pro.png';
 
 export default function Carrossel() {
+    const update = (direction) => {
+        const items = document.querySelectorAll('.item');
+        const dots = document.querySelectorAll('.dot');
+        const numberIndicator = document.querySelector('.numbers');
+        const list = document.querySelector('.list');
+        const total = items.length
+
+
+
+
+        document.querySelector('.item.active').classList.remove('active')
+        document.querySelector('.dot.active').classList.remove('active')
+
+        if (direction > 0) {
+            active = active + 1
+
+            if (active == total) {
+                active = 0
+            }
+        }
+
+
+        else if (direction < 0) {
+            active = active - 1
+            if (active < 0) {
+                active = total - 1
+            }
+        }
+
+        items[active].classList.add('active')
+        dots[active].classList.add('active')
+    }
+    clearInterval(timer)
+    timer = setInterval(() => {
+        update(1)
+    }, 5000);
+
+
+
+
+
     const esquerdo = () => {
-      alert("prev");
+        update(-1);
     };
     const direito = () => {
-      alert("next");
+        update(+1);
     };
 
     return (

@@ -169,7 +169,7 @@
     border-radius: 2px;
 }
 
-dot.active {
+.dot.active {
     background-color: #00f7ff;
     box-shadow: 0 0 10px rgba(0, 247, 255, 0.5);
 }
